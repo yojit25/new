@@ -1,0 +1,211 @@
+body {
+    font-family: Georgia, serif;
+    background-color: #ff0066;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly; /* centers horizontally */
+    align-items: stretch;  /* centers vertically */
+    min-height: 100vh;       /* full screen height */
+    text-align: center;      /* centers text inside elements */
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+#title {
+    font-size: 40px;
+    color: #ffffff;
+    animation: slide-in animation-play-state paused;
+}
+
+.message {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.heart-btn {
+    font-size: 50px;
+    background-color: #ff00d4;
+    border: solid;
+    cursor: pointer;
+}
+
+.heart-container {
+    margin-top: 20px;
+}
+
+.heart {
+    font-size: 20px;
+    color: #ff0000;
+    animation: float 2s infinite;
+}
+
+.surprise-btn {
+    background-color: #000000;
+    color: #d96db0;
+    padding: 30px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.video-container {
+    margin-top: 50px;
+}
+
+/* Slide structure */
+.slide {
+    display: none;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    width: auto;
+    top: 0;
+    left: 0;
+    transition: transform  margin-right 50s,
+    color 1s;
+    opacity: 0;
+}
+
+.current-slide {
+    display: block;
+    opacity: 1;
+    z-index: auto;
+}
+
+/* Slide-in / Slide-out */
+.slide-in-right {
+    animation: slideInRight 1s forwards;
+}
+.slide-out-left {
+    animation: slideOutLeft 1s forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Fade */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Heart animation (already applied) */
+.animate-heart {
+    animation: float 2s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+
+    
+
+
+
+.next-slide,
+.third-slide {
+    width: 100%;
+    min-height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;       /* Center horizontally */
+    align-items: flex-end;         /* Align content at the bottom */
+    padding-bottom: 40px;          /* Add some spacing from the bottom */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Content box styling for 2nd slide */
+.message-title {
+    font-size: 30px;
+    color: #ff69b4;
+}
+
+.message-text {
+    font-size: 20px;
+    color: #666;
+}
+
+.more-surprises-btn {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: zoom-in;
+}
+
+.more-surprises-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.surprise {
+    margin-bottom: 20px;
+}
+
+.surprise img {
+    width: 5%;
+    height: 3%;
+    border-radius: 10px;
+}
+
+/* Third slide content */
+.message-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.long-message-title {
+    font-size: 30px;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.long-message-text {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Transition animation for slide-in */
+.slide-transition {
+    animation: slide-in 1s ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
